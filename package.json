@@ -6,13 +6,15 @@
   "author": "Félix Bellanger <felix.bellanger@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --hot --config ./webpack.config.js"
+    "start": "webpack-dev-server --progress --colors --hot --history-api-fallback --config ./webpack.config.js"
   },
   "dependencies": {
     "path": "^0.12.7",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.5"
   },
