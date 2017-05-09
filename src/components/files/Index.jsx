@@ -1,4 +1,6 @@
 import React from 'react';
+import { Grid, Col, Row, Table, ButtonToolbar, Button } from 'react-bootstrap';
+import 'font-awesome-webpack';
 
 class Index extends React.Component {
   constructor(props) {
@@ -21,15 +23,33 @@ class Index extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-sm-12">
-            <ul>
-              {this.state.files.map(file => <li key={file.id}>{file.title}</li>)}
-            </ul>
-          </div>
-        </div>
-      </div>
+      <Grid fluid>
+        <Row>
+          <Col sm={12}>
+            <Table striped bordered hover responsive>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {this.state.files.map(file => (
+                  <tr>
+                    <td><code>{file.title}</code></td>
+                    <td className="col-sm-2">
+                      <ButtonToolbar className="btn-toolbar-no-float text-center">
+                        <Button bsStyle="primary"><i className="fa fa-edit"></i> Edit</Button>
+                        <Button bsStyle="danger"><i className="fa fa-trash"></i> Delete</Button>
+                      </ButtonToolbar>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </Table>
+          </Col>
+        </Row>
+      </Grid>
     );
   }
 }

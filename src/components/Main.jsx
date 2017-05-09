@@ -6,7 +6,7 @@ class Main extends React.Component {
   render() {
     return (
       <Switch>
-        <Route path="/files" component={FilesIndex} />
+        <Route exact path="/" component={FilesIndex} />
       </Switch>
     );
   }
