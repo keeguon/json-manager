@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Col, Row, Table, ButtonGroup, ButtonToolbar, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
+import FileSaver from 'file-saver';
 import 'font-awesome-webpack';
 
 class FilesIndex extends React.Component {
@@ -14,6 +15,11 @@ class FilesIndex extends React.Component {
 
   componentWillMount() {
     this._fetchFiles();
+  }
+
+  exportFiles(e) {
+    let blob = new Blob([JSON.stringify(this.state.files)], {type: "application/json;charset=utf-8"});
+    FileSaver.saveAs(blob, "database.json");
   }
 
   deleteFile(e) {
@@ -36,7 +42,7 @@ class FilesIndex extends React.Component {
               <LinkContainer to="/files/new"><Button bsSize="sm"><i className="fa fa-plus-square"></i> New JSON</Button></LinkContainer>
               <ButtonGroup>
                 <Button bsSize="sm"><i className="fa fa-upload"></i> Import JSON files</Button>
-                <Button bsSize="sm"><i className="fa fa-download"></i> Export JSON files</Button>
+                <Button bsSize="sm" onClick={this.exportFiles.bind(this)}><i className="fa fa-download"></i> Export JSON files</Button>
               </ButtonGroup>
             </ButtonToolbar>
             <hr />
