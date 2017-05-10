@@ -13,6 +13,10 @@ Each "file" is represented as a JSON encoded string in the localStorage identifi
 }
 ```
 
+## ToDo
+
+* Allow exported data to be imported.
+
 ## License
 
 Copyright 2017 Félix Bellanger <felix.bellanger@gmail.com>
