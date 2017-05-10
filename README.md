@@ -15,7 +15,7 @@ Each "file" is represented as a JSON encoded string in the localStorage identifi
 
 ## ToDo
 
-* Allow exported data to be imported.
+* Display more accurately the errors.
 
 ## License
 
