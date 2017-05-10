@@ -6,7 +6,7 @@ JSON Manager is a small application which allows to create JSON files in your br
 
 Each "file" is represented as a JSON encoded string in the localStorage identified by a UUID (v4) key. As a result a generated export of your data should look similar to the following:
 
-```
+```json
 {
   "4712a751-4174-4327-8ea0-1970d28b8bd9": { "name": "yadda yadda yadda", "content": "{ \"key\": \"value\", \"int\": 6 }" },
   "e23c3acf-b7f4-4685-a62d-7645e258f072": { "name": "yajf", "content": "{ \"yolo\": \"yala\", \"float\": 5.4 }" }
