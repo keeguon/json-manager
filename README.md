@@ -6,6 +6,7 @@ JSON Manager is a small application which allows to create JSON files in your br
 
 * node
 * yarn
+* webpack
 
 ## Run in development
 
