@@ -2,7 +2,7 @@
 
 JSON Manager is a small application which allows to create JSON files in your browser localStorage. It can then export those files in the localStorage for portability and then reimport this file elsewhere merging your existing data.
 
-## Dev dependencies
+## Dev requirements
 
 * node
 * yarn
