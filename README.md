@@ -2,6 +2,32 @@
 
 JSON Manager is a small application which allows to create JSON files in your browser localStorage. It can then export those files in the localStorage for portability and then reimport this file elsewhere merging your existing data.
 
+## Dev dependencies
+
+* node
+* yarn
+
+## Run in development
+
+```sh
+$ yarn install
+$ yarn start
+```
+
+## Compile for production
+
+```sh
+$ webpack -p --config webpack.production.config.js
+```
+
+## Run it in production
+
+Start a webserver with the `dist` folder as root, the easiest way to do this is to `cd` into the `dist` folder and run :
+
+```sh
+$ python3 -m http.server
+```
+
 ## A word on the stored data
 
 Each "file" is represented as a JSON encoded string in the localStorage identified by a UUID (v4) key. As a result a generated export of your data should look similar to the following:
@@ -12,6 +38,10 @@ Each "file" is represented as a JSON encoded string in the localStorage identifi
   "4c2734f7-00bc-476d-ae7f-e5e787d363d6": { "name": "yadda", "content": "{\"key\":\"value\",\"int\":6}" }
 }
 ```
+
+## ToDo
+
+* Optimize production build
 
 ## License
 
