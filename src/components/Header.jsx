@@ -7,7 +7,7 @@ class Header extends React.Component {
       <Navbar inverse staticTop>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#">JSON Manager</a>
+            <a href="/">JSON Manager</a>
           </Navbar.Brand>
         </Navbar.Header>
       </Navbar>

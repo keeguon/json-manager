@@ -8,14 +8,10 @@ Each "file" is represented as a JSON encoded string in the localStorage identifi
 
 ```json
 {
-  "4712a751-4174-4327-8ea0-1970d28b8bd9": { "name": "yadda yadda yadda", "content": "{ \"key\": \"value\", \"int\": 6 }" },
-  "e23c3acf-b7f4-4685-a62d-7645e258f072": { "name": "yajf", "content": "{ \"yolo\": \"yala\", \"float\": 5.4 }" }
+  "c78d311f-978f-440e-9beb-187e723107c9": { "name": "test", "content": "[1, 2, 3]" },
+  "4c2734f7-00bc-476d-ae7f-e5e787d363d6": { "name": "yadda", "content": "{\"key\":\"value\",\"int\":6}" }
 }
 ```
-
-## ToDo
-
-* Display more accurately the errors.
 
 ## License
 

@@ -49,7 +49,7 @@ class FilesIndex extends React.Component {
   render() {
     let files = Object.keys(this.state.files).map((key) => {
       return ( 
-        <tr>
+        <tr key={key}>
           <td>{this.state.files[key].name}</td>
           <td><code>{JSON.stringify(this.state.files[key].content)}</code></td>
           <td className="col-sm-2">

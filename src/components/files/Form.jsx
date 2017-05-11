@@ -89,10 +89,14 @@ class FilesForm extends React.Component {
               <FormGroup controlId="fileName" validationState={this.isValidName()}>
                 <ControlLabel>Name</ControlLabel>
                 <FormControl type="text" name="name" value={this.state.form.name} placeholder="Your filename" onChange={this.handleChange.bind(this)} />
+                <FormControl.Feedback />
+                <HelpBlock>The name should be below 255 characters.</HelpBlock>
               </FormGroup>
               <FormGroup controlId="fileContent" validationState={this.isValidJson()}>
                 <ControlLabel>Content</ControlLabel>
                 <FormControl componentClass="textarea" name="content" value={this.state.form.content} onChange={this.handleChange.bind(this)} />
+                <FormControl.Feedback />
+                <HelpBlock>Must be a valid JSON construct.</HelpBlock>
               </FormGroup>
 
               <Button type="submit">Submit</Button>
