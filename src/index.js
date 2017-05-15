@@ -13,4 +13,4 @@ ReactDOM.render((
 ), document.getElementById('root'));
 
 // hot reloading
-module.hot.accept();
+if (module.hot) module.hot.accept();

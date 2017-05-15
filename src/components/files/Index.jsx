@@ -52,7 +52,7 @@ class FilesIndex extends React.Component {
         <tr key={key}>
           <td>{this.state.files[key].name}</td>
           <td><code>{JSON.stringify(this.state.files[key].content)}</code></td>
-          <td className="col-sm-2">
+          <td className="col-sm-3">
             <ButtonToolbar className="btn-toolbar-no-float text-center">
               <LinkContainer to={"/files/edit/" + key}><Button bsStyle="primary"><i className="fa fa-edit"></i> Edit</Button></LinkContainer>
               <Button id={key} bsStyle="danger" onClick={this.deleteFile.bind(this)} ><i className="fa fa-trash"></i> Delete</Button>
