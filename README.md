@@ -23,11 +23,7 @@ $ yarn build
 
 ## Run it in production
 
-Start a webserver with the `dist` folder as root, the easiest way to do this is to `cd` into the `dist` folder and run :
-
-```sh
-$ python3 -m http.server
-```
+Simply open the file `dist/index.html` in your browser.
 
 ## A word on the stored data
 

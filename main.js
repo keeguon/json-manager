@@ -1,9 +1,6 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
-const finalhandler = require('finalhandler');
-const http = require('http');
-const serveStatic = require('serve-static');
 
 function isDevelopment() {
   return process.env.NODE_ENV === 'development';
@@ -17,15 +14,12 @@ function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 1024, height: 768});
 
-  let serve  = serveStatic('dist', { 'index': ['index.html'] });
-  let server = http.createServer(function onRequest(req, res) {
-    serve(req, res, finalhandler(req, res));
-  });
-
-  server.listen(3000);
-
-  // and load the index.html of the app.
-  mainWindow.loadURL('http://localhost:3000');
+  // and load the URL
+  mainWindow.loadURL(url.format({
+    pathname: path.join(__dirname, 'dist', 'index.html'),
+    protocol: 'file:',
+    slashes: true
+}));
 
   // Open the DevTools.
   //if (isDevelopment()) mainWindow.webContents.openDevTools();
