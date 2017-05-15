@@ -6,7 +6,6 @@ JSON Manager is a small application which allows to create JSON files in your br
 
 * node
 * yarn
-* webpack
 
 ## Run in development
 
@@ -43,8 +42,6 @@ I started playing with electron in order to deliver the application as a standal
 ```sh
 yarn start
 ```
-
-The standalone version run a static file server to serve the builded app, depending on your OS firewall it might ask to allow the creation of said server.
 
 ## ToDo
 
