@@ -46,7 +46,7 @@ yarn start
 ## ToDo
 
 * Optimize production build
-* Create standalone packages for different platforms
+* Test the included standalone releases
 
 ## License
 
