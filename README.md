@@ -15,10 +15,10 @@ $ yarn install
 $ yarn watch
 ```
 
-## Build for production
+## Build for production (web)
 
 ```sh
-$ yarn build
+$ yarn web
 ```
 
 ## Run it in production
@@ -49,7 +49,7 @@ The standalone version run a static file server to serve the builded app, depend
 ## ToDo
 
 * Optimize production build
-* Create standalone package for different platforms
+* Create standalone packages for different platforms
 
 ## License
 

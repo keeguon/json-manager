@@ -1,16 +1,15 @@
-var path      = require('path');
-var srcPath   = path.join(__dirname, 'src');
-var buildPath = path.join(__dirname, 'dist');
+const path      = require('path');
+const srcPath   = path.join(__dirname, 'src');
+const buildPath = path.join(__dirname, 'dist', 'electron');
 
 module.exports = {
   context: srcPath,
-  entry: [
-    path.join(srcPath, 'index.js')
-  ],
+  entry: [path.join(srcPath, 'index.js')],
   output: {
     path: buildPath,
     filename: 'bundle.js'
   },
+  target: 'electron-renderer',
   module: {
     rules: [
       { test: /\.css$/, use: [
