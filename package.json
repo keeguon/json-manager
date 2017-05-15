@@ -2,7 +2,7 @@
   "name": "json-manager",
   "version": "1.0.0",
   "description": "Simple JSON editor with import/export ability.",
-  "main": "index.js",
+  "main": "./dist/bundle.js",
   "author": "Félix Bellanger <felix.bellanger@gmail.com>",
   "license": "MIT",
   "scripts": {
