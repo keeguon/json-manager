@@ -23,7 +23,7 @@ $ yarn web
 
 ## Run it in production
 
-Simply open the file `dist/index.html` in your browser.
+Simply open the file `dist/web/index.html` in your browser.
 
 ## A word on the stored data
 

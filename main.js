@@ -16,7 +16,7 @@ function createWindow () {
 
   // and load the URL
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, 'dist', 'electron.html'),
+    pathname: path.join(__dirname, 'dist', 'electron', 'index.html'),
     protocol: 'file:',
     slashes: true
 }));
