@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { MemoryRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 
 import './index.css';
 
 import App from './components/App.jsx';
 
 ReactDOM.render((
-  <Router>
+  <Router hashType="hashbang">
     <App />
   </Router>
 ), document.getElementById('root'));
