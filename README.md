@@ -14,6 +14,8 @@ $ yarn install
 $ yarn watch
 ```
 
+Then open your browser to the following URL: <http://localhost:8080>.
+
 ## Build for production (web)
 
 ```sh
