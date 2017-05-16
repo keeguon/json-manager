@@ -32,8 +32,8 @@ Each "file" is represented as a JSON encoded string in the localStorage identifi
 
 ```json
 {
-  "c78d311f-978f-440e-9beb-187e723107c9": { "name": "test", "content": "[1, 2, 3]" },
-  "4c2734f7-00bc-476d-ae7f-e5e787d363d6": { "name": "yadda", "content": "{\"key\":\"value\",\"int\":6}" }
+  "c78d311f-978f-440e-9beb-187e723107c9": { "name": "test", "content": [1, 2, 3] },
+  "4c2734f7-00bc-476d-ae7f-e5e787d363d6": { "name": "yadda", "content": {"key":"value","int":6} }
 }
 ```
 
