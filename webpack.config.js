@@ -1,6 +1,6 @@
 var path      = require('path');
 var srcPath   = path.join(__dirname, 'src');
-var buildPath = path.join(__dirname, 'dist');
+var buildPath = path.join(__dirname, 'dist', 'web');
 
 module.exports = {
   context: srcPath,
@@ -29,11 +29,8 @@ module.exports = {
       { test: /\.jsx$/, exclude: /node_modules/ , use: [
         { loader: 'babel-loader' }
       ]},
-      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: [
-        { loader: "url-loader?limit=10000&mimetype=application/font-woff" }
-      ]},
-      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: [
-        { loader: "file-loader" }
+      { test: /\.(ttf|eot|svg|woff(2)?)(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: [
+        { loader: "file-loader?limit=1024&name=fonts/[name].[ext]" }
       ]}
     ]
   }

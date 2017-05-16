@@ -45,8 +45,9 @@ yarn start
 
 ## ToDo
 
+* Create build script for electron
 * Optimize production build
-* Test the included standalone releases
+* Write tests
 
 ## License
 

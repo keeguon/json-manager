@@ -37,22 +37,22 @@ class FilesLoadDialog extends React.Component {
         data    = JSON.parse(rawData);
 
         Object.keys(data).forEach((key) => {
-          let sourceJson = JSON.parse(data[key].content);
+          let sourceJson = data[key].content;
 
           if (localStorage[key]) {
-            let targetJson = JSON.parse(localStorage[key]);
+            let targetJson = JSON.parse(localStorage[key]).content;
 
             if (Array.isArray(sourceJson) && Array.isArray(targetJson)) {
               localStorage.setItem(key, JSON.stringify({ name: data[key].name, content: targetJson.merge(sourceJson) }));
             } else if (Array.isArray(sourceJson) && !Array.isArray(targetJson)) {
-              localStorage.setItem(key, JSON.stringify({ name: data[key].name, content: JSON.stringify(sourceJson) }));
+              localStorage.setItem(key, JSON.stringify({ name: data[key].name, content: sourceJson }));
             } else if (!Array.isArray(sourceJson) && Array.isArray(targetJson)) {
-              localStorage.setItem(key, JSON.stringify({ name: data[key].name, content: JSON.stringify(sourceJson) }));
+              localStorage.setItem(key, JSON.stringify({ name: data[key].name, content: sourceJson }));
             } else {
-              localStorage.setItem(key, JSON.stringify({ name: data[key].name, content: JSON.stringify(Object.assign(JSON.parse(data[key].content), sourceJson)) }));
+              localStorage.setItem(key, JSON.stringify({ name: data[key].name, content: Object.assign(targetJson, sourceJson) }));
             }
           } else {
-            localStorage.setItem(key, JSON.stringify({ name: data[key].name, content: JSON.stringify(sourceJson) }));
+            localStorage.setItem(key, JSON.stringify({ name: data[key].name, content: sourceJson }));
           }
 
           this.close();

@@ -69,7 +69,7 @@ class FilesForm extends React.Component {
     const fileId = (this.props.match.params.id ? this.props.match.params.id : uuidV4());
     
     if (this.isValid() === true) {
-      localStorage.setItem(fileId, JSON.stringify(this.state.form));
+      localStorage.setItem(fileId, JSON.stringify({ name: this.state.form.name, content: JSON.parse(this.state.form.content) }));
       this.setState({ redirect: true });
     }
   }
