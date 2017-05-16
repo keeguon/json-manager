@@ -17,7 +17,10 @@ class FilesForm extends React.Component {
   }
 
   componentWillMount() {
-    if (this.props.match.params.id) this.setState({ form: JSON.parse(localStorage[this.props.match.params.id]) });
+    if (this.props.match.params.id && localStorage[this.props.match.params.id]) {
+      const data = JSON.parse(localStorage[this.props.match.params.id]);
+      this.setState({ form: { name: data.name, content: JSON.stringify(data.content) } });
+    }
   }
 
   isValidName() {
@@ -59,7 +62,7 @@ class FilesForm extends React.Component {
 
   handleChange(e) {
     const fieldName  = e.target.name;
-    const fieldValue = e.target.value;
+    let   fieldValue = e.target.value;
     this.setState({ form: {...this.state.form, [fieldName]: fieldValue }});
   }
 
